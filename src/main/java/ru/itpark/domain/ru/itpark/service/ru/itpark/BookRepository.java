@@ -11,6 +11,7 @@ public class BookRepository {
         books[index] = book;
         index++;
     }
+
     public SearchBook[] getAll() {
         return books;
     }

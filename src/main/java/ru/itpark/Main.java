@@ -1,4 +1,4 @@
-package ru.itpark;
+/*package ru.itpark;
 
 import ru.itpark.domain.SearchBook;
 import ru.itpark.domain.ru.itpark.service.BookService;
@@ -17,3 +17,4 @@ public class Main {
 
     }
 }
+*/
