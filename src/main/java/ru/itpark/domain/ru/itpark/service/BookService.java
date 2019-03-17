@@ -15,8 +15,8 @@ public class BookService {
     public void create(String author, String isbn, String[] genre) {
 //сюда пишем, какие нам нужны поля для создания строчки массива, id не пишем, так как он присваивается программой
 // по принципу плюс 1 к предыдущему зарегистрировавшемуся
-        SearchBook searchbook = new SearchBook(nextId, author, isbn, genre);
-        repository.add(searchbook);
+        SearchBook book = new SearchBook(nextId, author, isbn, genre);
+        repository.addBooks();
         nextId++;//прибавляет один иднетификатор
     }
 

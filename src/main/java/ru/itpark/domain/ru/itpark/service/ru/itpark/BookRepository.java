@@ -3,14 +3,16 @@ package ru.itpark.domain.ru.itpark.service.ru.itpark;
 import ru.itpark.domain.SearchBook;
 
 public class BookRepository {
-   // SearchBook[] allBooks = new SearchBook[50];
+    private SearchBook[] books = new SearchBook[50];
+    private int index = 0;
 
-    //new BookRepository();
-    public int index = 0;
-
-        {
-    index++;}
-
-
+    public void addBooks(SearchBook book) {//добавь книги из массива SearchBook,
+        //элемент массива-book
+        books[index] = book;
+        index++;
+    }
+    public SearchBook[] getAll() {
+        return books;
+    }
 }
 
