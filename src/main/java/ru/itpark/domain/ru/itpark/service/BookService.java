@@ -16,7 +16,7 @@ public class BookService {
 //сюда пишем, какие нам нужны поля для создания строчки массива, id не пишем, так как он присваивается программой
 // по принципу плюс 1 к предыдущему зарегистрировавшемуся
         SearchBook book = new SearchBook(nextId, author, isbn, genre);
-        repository.addBooks();
+        repository.addBooks(book);
         nextId++;//прибавляет один иднетификатор
     }
 
