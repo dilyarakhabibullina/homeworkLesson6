@@ -20,10 +20,20 @@ public class BookService {
         nextId++;//прибавляет один иднетификатор
     }
 
-    public SearchBook[] search(String author, String[] isbn, String genre) {
+    public SearchBook[] searchByAuthor(String author) {
         SearchBook[] result = new SearchBook[10];
         int resultIndex = 0;
-
+        SearchBook[] books = repository.getAll();
+        for (SearchBook book : books) {
+            if (book == null) {
+                continue;
+            }
+            if (book.getAuthor().contains(author)) {
+                continue;
+            }
+            result[resultIndex] = book;
+            resultIndex++;
+        }
         return result;
     }
 
